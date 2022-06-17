@@ -132,9 +132,7 @@ p {
   margin-left: auto;
   align-items: center;
 }
-.contacts.item {
-  display: inline-flex;
-}
+
 .nav.link.current {
   color: var(--acсent-color);
 }
