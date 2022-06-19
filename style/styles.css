@@ -418,8 +418,14 @@ p {
 .address {
   line-height: 1.71;
 }
-footer-blok {
+.footer .container {
   display: flex;
+}
+.footer-blok {
+  margin-right: 70px;
+}
+.social-footer {
+  text-align: center;
 }
 .social-title {
   margin-bottom: 10px;
@@ -427,4 +433,34 @@ footer-blok {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
+  color: var(--main-light);
+}
+.social-footer .list {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.social-footer .item {
+  height: 44px;
+  width: 44px;
+  padding: 12px;
+
+  background-position: center;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+
+.social-footer .icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-footer .item:hover {
+  background-color: var(--acсent-color);
+  color: var(--main-light);
+}
+
+.social-footer .item + .item {
+  margin-left: 10px;
 }
