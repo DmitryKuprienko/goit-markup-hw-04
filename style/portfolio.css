@@ -6,7 +6,7 @@
   --logo-text: 'Raleway', sans-serif;
   /* цвета текста */
   --main-text-color: #212121;
-  --accent-color: #2196f3;
+  --acсent-color: #2196f3;
   --main-text-grey: #757575;
   --main-light: #ffffff;
 
@@ -15,6 +15,7 @@
   --background-light: #e5e5e5;
   --background-grey: #f5f4fa;
 }
+
 html {
   box-sizing: border-box;
 }
@@ -30,7 +31,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
-
 .list .link,
 .list .item,
 a {
@@ -65,14 +65,13 @@ p {
   margin-left: auto;
   margin-right: auto;
   /* УДАЛИТЬ */
-  /* background-color: yellow;
+  /* background-color: aqua;
   outline: 2px solid blue; */
 }
 
 /* header site -шапка сайта  */
 .header {
   background-color: var(--main-light);
-  border-bottom: 1px solid #ececec;
 }
 .container.site-nav {
   display: flex;
@@ -96,7 +95,7 @@ p {
 }
 
 .logo-web {
-  color: var(--accent-color);
+  color: var(--acсent-color);
 }
 
 .nav.list {
@@ -125,33 +124,33 @@ p {
 
 .contacts.link {
   color: var(--main-text-grey);
+  display: flex;
+  align-items: center;
 }
+
 /* контакти */
 .contacts.list {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
+.contacts.item {
+  display: flex;
+  align-items: center;
+}
 
 .nav.link.current {
   color: var(--acсent-color);
 }
-.contacts.link::before {
-  display: inline-flex;
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-.mail::before {
-  background-image: url(../images/envelope.svg);
+.icon-mail,
+.icon-tel {
+  margin-right: 10px;
+  fill: var(--main-text-grey);
 }
-.tel::before {
-  background-image: url(../images/smartphone.svg);
+.icon-mail:hover,
+.icon-tel:hover {
+  fill: var(--acсent-color);
 }
 
 /* hover i focus */
@@ -162,7 +161,7 @@ p {
 .footer-address .link:focus,
 .contacts.link:hover,
 .contacts.link:focus {
-  color: var(--accent-color);
+  color: var(--acсent-color);
 }
 
 .visually-hidden {

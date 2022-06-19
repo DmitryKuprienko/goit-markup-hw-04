@@ -115,6 +115,7 @@ p {
 
 .nav.link,
 .contacts.link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -123,7 +124,8 @@ p {
 }
 
 .contacts.link {
-  color: var(--main-text-grey);
+  display: flex;
+  align-items: center;
 }
 
 /* контакти */
@@ -133,27 +135,18 @@ p {
   align-items: center;
 }
 .contacts.item {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  fill: var(--main-text-grey);
 }
+
 .nav.link.current {
   color: var(--acсent-color);
 }
-.contacts.link::before {
-  display: inline-flex;
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-.mail::before {
-  background-image: url(../images/envelope.svg);
-}
-.tel::before {
-  background-image: url(../images/smartphone.svg);
+.icon-mail,
+.icon-tel {
+  margin-right: 10px;
 }
 
 /* hover i focus */
@@ -163,8 +156,11 @@ p {
 .footer-address .link:hover,
 .footer-address .link:focus,
 .contacts.link:hover,
-.contacts.link:focus {
+.contacts.link:focus,
+.contacts.item:hover,
+.contacts.item:focus {
   color: var(--acсent-color);
+  fill: var(--acсent-color);
 }
 
 /* main section- главний раздел */
@@ -259,31 +255,17 @@ p {
   margin-right: 30px;
   align-items: flex-end;
 }
-.description.item::before {
+.blok-icon {
   display: block;
-  content: '';
-  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding-left: 100px;
   background-color: #f5f4fa;
-  border-radius: 4px;
+  background-repeat: no-repeat;
 }
-.icon-radar::before {
-  background-image: url(../images/radar.svg);
-}
-.icon-hours::before {
-  background-image: url(../images/clock\ 1.svg);
-}
-.icon-comp::before {
-  background-image: url(../images/comp.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/astronaut\ 1.svg);
-}
-.description.item:last-child {
-  margin-right: 0;
+.icon {
+  background-size: contain;
 }
 
 .disc-text {
@@ -302,7 +284,8 @@ p {
   font-size: 36px;
 }
 .what-doing,
-.team {
+.team,
+.client {
   text-align: center;
   /* background-color: var(--background-light); */
 }
@@ -342,9 +325,7 @@ p {
 }
 .team .team-title {
   margin-bottom: 10px;
-
   color: var(--main-text-color);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -355,37 +336,56 @@ p {
 
   color: var(--main-text-grey);
 }
-
-.social-link .list {
-  padding-bottom: 30px;
+.social .list {
   display: flex;
+  margin-bottom: 30px;
   justify-content: center;
 }
 
-.social-link .link {
-  display: inline-block;
-  width: 44px;
+.social .item {
+  display: block;
   height: 44px;
-  background-repeat: no-repeat;
-  background-size: 20px;
+  width: 44px;
+  padding: 12px;
+
   background-position: center;
   border-radius: 50%;
-}
-.social-link .link:hover {
-  background-color: var(--acсent-color);
+  color: #afb1b8;
 }
 
-.instagram {
-  background-image: url(../images/instagram\ 2.svg);
+.social .icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
-.twitter {
-  background-image: url(../images/twitter.svg);
+
+.social .item:hover {
+  background-color: var(--acсent-color);
+  color: var(--main-light);
 }
-.facebook {
-  background-image: url(../images/facebook\ 1.svg);
+
+.social .item + .item {
+  margin-left: 10px;
 }
-.linkedin {
-  background-image: url(../images/linkedin\ 1.svg);
+/* our client-наши кліенти */
+.list.client {
+  display: flex;
+}
+.client .item {
+  box-sizing: border-box;
+  padding: 16px 32px;
+  height: 92px;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client .item:hover {
+  fill: var(--acсent-color);
+  border-color: var(--acсent-color);
+}
+
+.client .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* footer site-подвал сайта */
@@ -417,4 +417,14 @@ p {
 }
 .address {
   line-height: 1.71;
+}
+footer-blok {
+  display: flex;
+}
+.social-title {
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
 }
