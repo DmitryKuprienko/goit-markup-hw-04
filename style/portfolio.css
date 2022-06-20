@@ -72,6 +72,7 @@ p {
 /* header site -шапка сайта  */
 .header {
   background-color: var(--main-light);
+  border-bottom: 1px solid #ececec;
 }
 .container.site-nav {
   display: flex;
@@ -359,16 +360,18 @@ p {
   margin-bottom: 30px;
 }
 
-.social-footer .item {
+.social-footer .link {
+  display: block;
   height: 44px;
   width: 44px;
   padding: 12px;
 
   background-position: center;
   border-radius: 50%;
-  color: #afb1b8;
+
   background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
+  color: var(--main-light);
 }
 
 .social-footer .icon-social {
@@ -377,8 +380,8 @@ p {
   fill: currentColor;
 }
 
-.social-footer .item:hover,
-.social-footer .item:focus {
+.social-footer .link:hover,
+.social-footer .link:focus {
   background-color: var(--acсent-color);
   color: var(--main-light);
 }
